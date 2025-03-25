@@ -2,6 +2,7 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import express from 'express';
 import connectDB from './db.js';
+import assignRouter from './routes/assign.route.js';
 import buildingRouter from './routes/building.route.js';
 import complaintRouter from './routes/complaint.route.js';
 import eventRouter from './routes/event.route.js';
@@ -22,6 +23,7 @@ app.use('/api/complaint', complaintRouter);
 app.use('/api/event', eventRouter);
 app.use('/api/parking', parkingRouter);
 app.use('/api/building', buildingRouter);
+app.use('/api/assign', assignRouter);
 
 app.listen(5050,()=>{
     console.log(`Server running on port 5050`)

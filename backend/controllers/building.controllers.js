@@ -30,6 +30,7 @@ export const getBuildingById = async (req, res) => {
     }
 };
 
+ 
 
 export const updateBuilding = async (req, res) => {
     try {
